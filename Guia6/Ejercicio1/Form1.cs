@@ -6,6 +6,7 @@ namespace Ejercicio1
     {
 
         List<Persona> personas = new List<Persona>();
+        bool cerrar = false;
         public Form1()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace Ejercicio1
 
             fDatos.ShowDialog();
 
-            if (fDatos.DialogResult == DialogResult.OK)
+            if (fDatos.DialogResult == DialogResult.OK && cerrar==false)
             {
                 string nombre = fDatos.textBox1.Text;
 
@@ -36,6 +37,7 @@ namespace Ejercicio1
                 if (p != null)
                 {
                     personas.Add(p);
+                    Actualizar();
                 }
                 else
                 {
