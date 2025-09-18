@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio1.Models;
 
-public class FormatoCUITNoValidoException
+public class FormatoCUITNoValidoException:ApplicationException
 {
+    public FormatoCUITNoValidoException():base("Cuit no valido"){}
 }
